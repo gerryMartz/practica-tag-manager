@@ -20,6 +20,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -56,6 +57,7 @@ html {
 }
 
 .hero__copy {
+    margin-top: 20px;
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -169,4 +171,276 @@ html {
     font-weight: 300;
 }
 
+/* COPY SECTION */
+
+.copy {
+    background-color: var(--color-primary);
+}
+
+.title--margin {
+    color: white;
+    margin: 0;
+}
+
 /* GALLERY SECTION */
+
+.gallery__container {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+.gallery__img {
+    display: block;
+    width: 30%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    filter: grayscale(100%) contrast(100%);
+    transition: filter 500ms ease 0s;
+}
+
+.gallery__img:hover {
+    filter: grayscale(0) contrast(150%);
+}
+
+/* LANGUAGES SECTION */
+
+.languages {
+    background-color: var(--color-bg);
+}
+
+.languages__gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.languages__img {
+    display: block;
+    width: 20%;
+    height: 100px;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+}
+
+.footer__container {
+    --color-primary: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__texts {
+    width: 50%;
+}
+
+.footer__icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer__icon {
+    font-size: 2rem;
+    color: white;
+    text-decoration-line: none;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: all 500ms ease 0s;
+}
+
+.footer__icon.fa-brands {
+    line-height: 60px;
+}
+
+.footer__icon:hover {
+    --color-primary: #F77062;
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.footer__link {
+    color: white;
+}
+
+.footer__link:hover {
+    text-decoration-line: none;
+}
+
+.footer__figure {
+    width: 35%;
+}
+
+.footer__img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        --padding-container: 40px 0;
+    }
+
+    .hero__main {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .hero__figure {
+        width: 60%;
+    }
+
+    .hero__img {
+        max-width: 85%;
+    }
+
+    .hero__texts {
+        width: 100%;
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+    }
+
+    .about {
+        gap: 80px;
+    }
+
+    .about__texts {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        --align-title: center;
+    }
+
+    .about__paragraph {
+        text-align: left;
+    }
+
+    .about__figure {
+        width: 100%;
+    }
+
+    .portfolio__cards {
+        row-gap: 30px;
+    }
+
+    .portfolio__card {
+        width: 45%;
+    }
+
+    .gallery__img {
+        width: 45%;
+    }
+
+    .languages__gallery {
+        justify-content: space-between;
+    }
+
+    .footer__container {
+        flex-direction: column-reverse;
+        row-gap: 30px;
+    }
+
+    .footer__figure {
+        width: 45%;
+    }
+
+    .footer__img {
+        width: 100%;
+    }
+
+    .footer__texts {
+        width: 100%;
+    }
+
+    .footer__icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .footer__icon.fa-brands {
+        line-height: 40px;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+
+    .hero__figure {
+        width: 85%;
+    }
+
+    .hero__img {
+        max-width: 100%;
+    }
+
+    .hero__title {
+        font-size: 2.8rem;
+    }
+
+    .about__texts {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .portfolio__card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .gallery__img {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .languages__gallery {
+        justify-content: space-around;
+        row-gap: 30px;
+    }
+
+    .footer__container {
+        row-gap: 40px;
+    }
+
+    .languages__img {
+        width: 35%;
+    }
+
+    .footer__figure {
+        width: 90%;
+    }
+
+    .footer__img {
+        max-width: 330px;
+    }
+    
+}
